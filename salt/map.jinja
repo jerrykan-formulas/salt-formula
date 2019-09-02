@@ -2,7 +2,7 @@
 # vim: ft=jinja
 
 {%- macro deep_merge(a, b) %}
-{%-     for k,v in b.iteritems() %}
+{%-     for k,v in b.items() %}
 {%-         if v is string or v is number %}
 {%-             do a.update({ k: v }) %}
 {%-         elif v is not mapping %}
